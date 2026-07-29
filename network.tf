@@ -31,3 +31,23 @@ resource "aws_subnet" "public_subnet_1" {
     Name = "riki-public-subnet-1a"
   }
 }
+
+# 4. Membuat Route Table
+resource "aws_route_table" "public_rt" {
+  vpc_id = aws_vpc.main_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.main_igw.id
+  }
+
+  tags = {
+    Name = "riki-public-rt"
+  }
+}
+
+# 5. Menghubungkan Route Table ke Subnet
+resource "aws_route_table_association" "public_rta" {
+  subnet_id      = aws_subnet.public_subnet_1.id
+  route_table_id = aws_route_table.public_rt.id
+}
