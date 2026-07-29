@@ -1,5 +1,3 @@
-# 1. Membuat dan menulis file README.md secara otomatis
-cat << 'EOF' > README.md
 # Terraform AWS Web App Foundation
 
 Repositori ini berisi kode *Infrastructure as Code* (IaC) menggunakan **Terraform** untuk membangun fondasi jaringan (*networking*) dan server virtual (*compute*) di cloud **Amazon Web Services (AWS)** region Singapura (`ap-southeast-1`).
@@ -37,5 +35,5 @@ Proyek ini secara otomatis memprovisikan sumber daya berikut menggunakan Terrafo
 
 1. **Clone repositori ini:**
    ```bash
-   git clone [https://github.com/RikiJespo/terraform-aws-webapp.git](https://github.com/RikiJespo/terraform-aws-webapp.git)
+   git clone https://github.com/RikiJespo/terraform-aws-webapp.git
    cd terraform-aws-webapp
